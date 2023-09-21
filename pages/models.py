@@ -9,9 +9,9 @@ class Page(models.Model):
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
     class Meta:
-        verbose_name = "página"
-        verbose_name_plural = "páginas"
-        ordering = ['order', 'title']
+        verbose_name = "proyecto"
+        verbose_name_plural = "proyectos"
+        ordering = ['-created','order', 'title']
 
     def __str__(self):
         return self.title
