@@ -55,3 +55,7 @@ footer p {
 .navbar-brand:hover .logo {
     filter: brightness(0.8); /* Reducir brillo del logotipo al pasar el ratón */
   }
+/* Titulos */
+.titulo span {
+    font-size: 2rem;
+}
