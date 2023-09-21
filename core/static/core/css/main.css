@@ -9,7 +9,7 @@ main{
     padding-top: var(--jumbotron-padding-y);
     padding-bottom: var(--jumbotron-padding-y);
     margin-bottom: 0;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 @media (min-width: 768px) {
     .jumbotron {
@@ -42,3 +42,16 @@ footer p {
 .box-shadow { 
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
 }
+
+
+/* Estilos para el logotipo en la barra de navegación */
+.logo {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 0.625rem;
+}
+
+/* Cambiar color del logotipo al pasar el ratón por encima */
+.navbar-brand:hover .logo {
+    filter: brightness(0.8); /* Reducir brillo del logotipo al pasar el ratón */
+  }
