@@ -44,18 +44,9 @@ footer p {
 }
 
 
-/* Estilos para el logotipo en la barra de navegación */
-.logo {
-  width: 6rem;
-  height: 6rem;
-  margin-right: 0.625rem;
-}
 
-/* Cambiar color del logotipo al pasar el ratón por encima */
-.navbar-brand:hover .logo {
-    filter: brightness(0.8); /* Reducir brillo del logotipo al pasar el ratón */
-  }
 /* Titulos */
 .titulo span {
     font-size: 2rem;
 }
+
