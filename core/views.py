@@ -7,13 +7,8 @@ class HomePageView(TemplateView):
     template_name = "core/home.html"
     
     def get(self, request, *args, **kwargs):
-        return render(request, self.template_name, {'title': "Colectivo Rectangulo"})
+        return render(request, self.template_name, {'title': "webPlayground"})
     
-class AboutPageView(TemplateView):
-    template_name = "core/about.html"
-
-    def get(self, request, *args, **kwargs):
-        return render(request, self.template_name, {'title': "Nosotros"})
 
 class SamplePageView(TemplateView):
     template_name = "core/sample.html"
