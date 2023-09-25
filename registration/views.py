@@ -25,3 +25,9 @@ class SignUpView(CreateView):
         form.fields['password2'].widget = forms.PasswordInput(
             attrs={'class':'form-control mb-2', 'placeholder':'Repite la contraseña'})
         return form
+    
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        if User.objects.filter(email=email).exists():
+            raise forms.ValidationError("El email ya está registrado, prueba con otro.")
+        return email
