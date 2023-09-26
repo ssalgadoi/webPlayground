@@ -29,7 +29,7 @@ class ProfileForm(forms.ModelForm):
         }
 
 class EmailForm(forms.ModelForm):
-    email = forms.EmailField(required=True, help_text="Requerido, 254 carácteres como maximo y dbe ser valido. ")
+    email = forms.EmailField(required=True, help_text="Requerido, 254 carácteres como maximo y debe ser valido. ")
 
     
     class Meta:
