@@ -1,5 +1,8 @@
 from .forms import UserCreationFormWithEmail
 from django.views.generic import CreateView
+from django.views.generic.base import TemplateView
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django import forms
 
@@ -31,3 +34,8 @@ class SignUpView(CreateView):
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError("El email ya está registrado, prueba con otro.")
         return email
+
+
+@method_decorator(login_required, name='dispatch')
+class ProfileUpdate(TemplateView):
+    template_name = 'registration/profile_form.html'
