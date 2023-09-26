@@ -37,5 +37,5 @@ class SignUpView(CreateView):
 
 
 @method_decorator(login_required, name='dispatch')
-class ProfileUpdate(TemplateView):
+class ProfileUpdate(UpdateView):
     template_name = 'registration/profile_form.html'
